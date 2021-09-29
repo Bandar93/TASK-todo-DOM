@@ -2,14 +2,17 @@
 const CATEGORY_SELECTOR = "categories-list";
 const CATEGORY_FILTER = "categories-list-filter";
 
-let tasks = [];
+let id = 1;
+let tasks = [{ id: "", title: "", category: "", done: false }];
 let categories = [];
 
+// let id = id++;
+
 // REMOVE ME: SAMPLE FILLING
-tasks = [
-  { id: 0, title: "Game of thrones", category: "Movies", done: false },
-  { id: 1, title: "Toy Story 4", category: "Movies", done: false },
-];
+// tasks = [
+//   { id: 0, title: "Game of thrones", category: "Movies", done: false },
+//   { id: 1, title: "Toy Story 4", category: "Movies", done: false },
+// ];
 
 categories = ["Movies", "Groceries"];
 // SAMPLE
@@ -20,13 +23,22 @@ renderTasks(tasks, "tasks-list");
 function taskChecked(taskId, checked) {
   // implement the delete task.
   // You are given the task id
+
   console.log(`${checked ? "" : "UN"}CHECKED TASK`, taskId);
 }
 
 function addTask() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_SELECTOR);
   const taskTitle = getNewTaskText();
+  // const done === false
+
   // continue the code here
+  tasks.push({
+    id: id++,
+    title: `${taskTitle}`,
+    category: `${selectedCategory}`,
+  });
+
   alert(`Category: ${selectedCategory} | Task: ${taskTitle}`);
 }
 
@@ -43,3 +55,12 @@ function filterTasks() {
   // REMOVE ME: sample alert
   alert(`Category: ${selectedCategory} | done: ${done}`);
 }
+
+// let Object = {
+// id: 0,
+// category:${selectedCategory} ,
+// }
+
+// var element = {};
+// element.push({ id: id, quantity: quantity });
+// cart.push(element);
