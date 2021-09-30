@@ -2,11 +2,9 @@
 const CATEGORY_SELECTOR = "categories-list";
 const CATEGORY_FILTER = "categories-list-filter";
 
-let id = 1;
+let id = 0;
 let tasks = [{ id: "", title: "", category: "", done: false }];
 let categories = [];
-
-// let id = id++;
 
 // REMOVE ME: SAMPLE FILLING
 // tasks = [
@@ -18,7 +16,7 @@ categories = ["Movies", "Groceries"];
 // SAMPLE
 renderCategories(categories, CATEGORY_SELECTOR);
 renderCategories(categories, CATEGORY_FILTER);
-renderTasks(tasks, "tasks-list");
+renderTasks(tasks, task.title);
 
 function taskChecked(taskId, checked) {
   // implement the delete task.
@@ -37,6 +35,7 @@ function addTask() {
     id: id++,
     title: `${taskTitle}`,
     category: `${selectedCategory}`,
+    done: taskChecked(taskId, checked),
   });
 
   alert(`Category: ${selectedCategory} | Task: ${taskTitle}`);
