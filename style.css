@@ -1,3 +1,65 @@
 .todo-item {
   display: flex;
 }
+.button {
+  border: none;
+  color: #001d3d;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 2px;
+  transition-duration: 0.4s;
+  background-color: #ffc300;
+  font-weight: bolder;
+}
+body {
+  background-color: #003566;
+}
+.category {
+  text-align: center;
+}
+
+.task {
+  text-align: center;
+  margin-right: 60px;
+}
+h1 {
+  color: #ffc300;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.filter {
+  background-color: #ffc300;
+  color: #003566;
+  text-align: left;
+}
+
+input {
+  width: 20%;
+  padding: 10px;
+  margin: 8px;
+}
+select {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.container {
+  height: 300px;
+  width: 400px;
+  background-color: #ffc300;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  overflow-y: scroll;
+}
+.title {
+  color: #003566;
+  font-weight: bolder;
+}
+
+.footer {
+  text-align: center;
+}

@@ -5,24 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <div>
-      <h1>Create your task</h1>
-      <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
-      <select id="categories-list" title="All"></select>
-      <button onclick="addTask()">Click me</button>
-      <input
-        type="text"
-        name="new-task"
-        id="new-task"
-        placeholder="* Add a new task"
-      />
-    </div>
-
-    <div>
+    <div class="category">
       <h1>Create your category</h1>
       <input
         type="text"
@@ -30,23 +18,39 @@
         id="new-category"
         placeholder="* Add a new category"
       />
+      <button class="button" onclick="addCategory()">Add</button>
+    </div>
+
+    <div class="task">
+      <h1>Create your task</h1>
+      <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
+      <select class="select1" id="categories-list" title="All"></select>
+      <input
+        type="text"
+        name="new-task"
+        id="new-task"
+        placeholder="* Add a new task"
+      />
+      <button class="button" onclick="addTask()">Add</button>
     </div>
 
     <!-- FILTERING DIV -->
-    <div>
-      <h1>filter by category</h1>
-      <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
-      <select id="categories-list-filter" title="All"></select>
-      <!-- DONE for filtering thing -->
-      <div>
-        <input type="checkbox" name="done" id="done" />
-        <label for="done">Filter by done</label>
+    
+      <div class="filter">
+        <h1 class="title">filter by category</h1>
+        <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
+        <select id="categories-list-filter" title="All"></select>
+        <!-- DONE for filtering thing -->
+        <div>
+          <br />
+          <input type="checkbox" name="done" id="done" />
+          <label for="done">Filter by done</label>
+        </div>
       </div>
+      <hr />
+      <!-- KEEP THE DIV EMPTY. IT WILL BE FILLED BY JS  -->
+      <div class="container" id="tasks-list"></div>
     </div>
-    <hr />
-
-    <!-- KEEP THE DIV EMPTY. IT WILL BE FILLED BY JS  -->
-    <div id="tasks-list"></div>
   </body>
 
   <script src="./components/categoryItem.js"></script>
