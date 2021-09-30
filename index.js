@@ -22,6 +22,10 @@ function taskChecked(taskId, checked) {
   // implement the delete task.
   // You are given the task id
 
+  // tasks.map((taskID) => tasks.done === true);
+
+  // tasks = tasks.map((task) => task.done === true);
+
   console.log(`${checked ? "" : "UN"}CHECKED TASK`, taskId);
 }
 

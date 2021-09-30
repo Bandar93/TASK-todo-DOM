@@ -34,6 +34,7 @@ h1 {
   background-color: #ffc300;
   color: #003566;
   text-align: left;
+  font-size: larger;
 }
 
 input {
@@ -50,10 +51,11 @@ select {
   height: 300px;
   width: 400px;
   background-color: #ffc300;
-  position: -webkit-sticky;
-  position: sticky;
+  /* position: -webkit-sticky;
+  position: sticky; */
   top: 0px;
   overflow-y: scroll;
+  font-size: large;
 }
 .title {
   color: #003566;
