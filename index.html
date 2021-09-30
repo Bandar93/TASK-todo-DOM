@@ -13,13 +13,13 @@
       <h1>Create your task</h1>
       <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
       <select id="categories-list" title="All"></select>
-      <button onclick="addTask()">Click me</button>
       <input
         type="text"
         name="new-task"
         id="new-task"
         placeholder="* Add a new task"
       />
+      <button class="button" onclick="addTask()">Add</button>
     </div>
 
     <div>
@@ -30,6 +30,7 @@
         id="new-category"
         placeholder="* Add a new category"
       />
+      <button class="button" onclick="addCategory()">Add</button>
     </div>
 
     <!-- FILTERING DIV -->

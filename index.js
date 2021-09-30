@@ -2,19 +2,8 @@
 const CATEGORY_SELECTOR = "categories-list";
 const CATEGORY_FILTER = "categories-list-filter";
 
-let id = 1;
-let tasks = [{ id: "", title: "", category: "", done: false }];
+let tasks = [];
 let categories = [];
-
-// let id = id++;
-
-// REMOVE ME: SAMPLE FILLING
-// tasks = [
-//   { id: 0, title: "Game of thrones", category: "Movies", done: false },
-//   { id: 1, title: "Toy Story 4", category: "Movies", done: false },
-// ];
-
-categories = ["Movies", "Groceries"];
 // SAMPLE
 renderCategories(categories, CATEGORY_SELECTOR);
 renderCategories(categories, CATEGORY_FILTER);
@@ -30,22 +19,23 @@ function taskChecked(taskId, checked) {
 function addTask() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_SELECTOR);
   const taskTitle = getNewTaskText();
-  // const done === false
-
-  // continue the code here
   tasks.push({
-    id: id++,
     title: `${taskTitle}`,
     category: `${selectedCategory}`,
+    done: `${false}`,
   });
-
-  alert(`Category: ${selectedCategory} | Task: ${taskTitle}`);
+  tasks.forEach((item, i) => {
+    item.id = i + 1;
+  });
+  renderTasks(tasks, "tasks-list");
 }
 
 function addCategory() {
   const newCategory = getNewCategoryText();
-  // continue the code here
-  alert(`New category was added: ${newCategory}`);
+  console.log(`Add ${newCategory}`);
+  categories.push(newCategory);
+  renderCategories(categories, CATEGORY_SELECTOR);
+  renderCategories(categories, CATEGORY_FILTER);
 }
 
 function filterTasks() {
